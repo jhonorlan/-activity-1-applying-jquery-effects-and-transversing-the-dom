@@ -126,14 +126,15 @@ body {
     min-height: 150px;
 }
 
-.floating-container form .body .values .value .notif {
+.notif {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 150px;
 }
 
-.floating-container form .body .values .value .notif h2 {
-    font-size: lightgray;
+.notif h2 {
+    color: lightgray;
 }
 
 .floating-container form .body .options .option.selected .circle {

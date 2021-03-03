@@ -5,6 +5,7 @@ const TABS = FC.find(".body");
 const OPTIONS = $(".options .option");
 const FORMDATA = {};
 const DONE = [];
+
 let PAYMENTOPTION = null;
 
 ITEMS.on("click", function () {
@@ -36,11 +37,9 @@ function showContent(content) {
 	let targetIndex = 0;
 
 	const isEmpty = function () {
-		return (
-			FORMDATA &&
-			Object.keys(FORMDATA).length === 0 &&
-			FORMDATA.constructor === Object
-		);
+		const key = Object.keys(FORMDATA).length === 0;
+		const isObject = FORMDATA.constructor === Object;
+		return FORMDATA && key && isObject;
 	};
 
 	$(".floating-container .body").each(function (index) {
@@ -54,13 +53,13 @@ function showContent(content) {
 
 	element.show();
 
-	for (let i = targetIndex; i < ITEMS.length; i++) {
-		ITEMS[i].classList.remove("active");
-	}
-
-	for (let i = targetIndex; i > -1; i--) {
-		ITEMS[i].classList.add("active");
-	}
+	ITEMS.each(function (index) {
+		if (targetIndex < index) {
+			$(this).removeClass("active");
+		} else {
+			$(this).addClass("active");
+		}
+	});
 
 	if (targetIndex == ITEMS.length - 1) {
 		if (!isEmpty()) alert("PAYMENT SUCCESS");
