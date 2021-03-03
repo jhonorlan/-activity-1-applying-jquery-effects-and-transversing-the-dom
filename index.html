@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Activity 1 | Book It Surname Firstname Grade/Section</title>
+
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script src="./lib/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="floating-container">
+			<div class="head">
+				<div class="item active" data-content="billing-information">
+					<div class="content">
+						<p>Step 1</p>
+						<span>Billing Information</span>
+					</div>
+				</div>
+				<div class="item" data-content="payment-method">
+					<div class="content">
+						<p>Step 2</p>
+						<span>Payment Method</span>
+					</div>
+				</div>
+				<div class="item" data-content="payment-summary">
+					<div class="content">
+						<p>Step 3</p>
+						<span>Payment Summary</span>
+					</div>
+				</div>
+				<div class="item" data-content="finish">
+					<div class="content">
+						<p>Step 4</p>
+						<span>Finish</span>
+					</div>
+				</div>
+			</div>
+			<form action="">
+				<div class="body form-body billing-information">
+					<div class="form-group">
+						<label for="">Firstname</label>
+						<input type="text" name="firstname" />
+					</div>
+					<div class="form-group">
+						<label for="">Middlename</label>
+						<input type="text" name="middlename" />
+					</div>
+					<div class="form-group">
+						<label for="">Lastname</label>
+						<input type="text" name="lastname" />
+					</div>
+					<div class="form-group">
+						<label for="">Email</label>
+						<input type="text" name="email" />
+					</div>
+					<div class="form-group">
+						<label for="">Mobile Number</label>
+						<input type="text" name="mobile" />
+					</div>
+					<div class="form-group">
+						<label for="">Address</label>
+						<input type="text" name="address" />
+					</div>
+					<div class="form-group">
+						<label for="">Password</label>
+						<input type="password" name="password" />
+					</div>
+					<div class="form-group">
+						<label for="">Confirm Password</label>
+						<input type="password" name="confirm" />
+					</div>
+				</div>
+				<div class="body payment-method">
+					<div class="options">
+						<div class="option" value="cash-on-delivery">
+							<div class="circle"></div>
+							<div class="box"><span>Cash on delivery</span></div>
+						</div>
+						<div class="option" value="credit-card">
+							<div class="circle"></div>
+							<div class="box"><span>Credit Debit Card</span></div>
+						</div>
+						<div class="option" value="bank-transfer">
+							<div class="circle"></div>
+							<div class="box"><span>Bank Transfer</span></div>
+						</div>
+					</div>
+					<div class="values">
+						<div class="value cash-on-delivery">
+							<div class="form-body">
+								<div class="form-group">
+									<label for="">Region</label>
+									<input type="text" name="region" />
+								</div>
+								<div class="form-group">
+									<label for="">Province</label>
+									<input type="text" name="province" />
+								</div>
+								<div class="form-group">
+									<label for="">City</label>
+									<input type="text" name="city" />
+								</div>
+								<div class="form-group">
+									<label for="">Barangay</label>
+									<input type="text" name="barangay" />
+								</div>
+								<div class="form-group">
+									<label for="">Postal Code</label>
+									<input type="text" name="postal" />
+								</div>
+								<div class="form-group">
+									<label for="">Detailed Address</label>
+									<input type="text" name="detailed-address" />
+								</div>
+							</div>
+						</div>
+						<div class="value credit-card">
+							<div class="form-body">
+								<div class="form-group">
+									<label for="">Card Number</label>
+									<input type="text" name="card-number" />
+								</div>
+
+								<div class="form-group">
+									<label for="">Holder's Name</label>
+									<input type="text" name="card-holder" />
+								</div>
+								<div class="form-group">
+									<label for="">Card Month</label>
+									<input type="number" name="card-month" />
+								</div>
+								<div class="form-group">
+									<label for="">Card Year</label>
+									<input type="number" name="card-year" />
+								</div>
+							</div>
+						</div>
+						<div class="value bank-transfer">Bank Transfer is comming soon</div>
+					</div>
+				</div>
+				<div class="body payment-summary">
+					<div class="sub-text"></div>
+					<div class="text">
+						<p>Shipping Fee: Free</p>
+						<p>Subtotal: Php 6000</p>
+						<h2>Total: Php 6000</h2>
+					</div>
+				</div>
+				<div class="body finish">Finish</div>
+			</form>
+		</div>
+
+		<script src="./assets/javascript/script.js"></script>
+	</body>
+</html>
